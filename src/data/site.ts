@@ -73,6 +73,12 @@ export const site = {
     academicRescueAcademyVideo: null as string | null,
     popUpWelfareCampsVideo: null as string | null,
   },
+  videoContent: {
+    hero: {
+      title: "1 minute introduction",
+      status: "Video coming soon",
+    },
+  },
   leadership: [
     { role: "President", name: "Name to be supplied", image: null },
     { role: "Secretary", name: "Name to be supplied", image: null },
