@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 
 export function Header() {
   return (
-    <header className="relative border-b border-line bg-cream">
+    <header className="sticky top-0 z-40 border-b border-line bg-cream">
       <Container className="flex min-h-20 items-center justify-between gap-8">
         <Link href="/" className="group focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
           <span className="block text-lg font-semibold tracking-[-0.02em] text-ink">{site.identity.name}</span>
