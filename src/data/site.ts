@@ -26,6 +26,12 @@ export type GalleryPlaceholder = {
   image: string | null;
 };
 
+export type EditorialStep = {
+  number: string;
+  title: string;
+  description: string;
+};
+
 export const site = {
   identity: {
     name: "Tori School",
@@ -78,6 +84,14 @@ export const site = {
       title: "1 minute introduction",
       status: "Video coming soon",
     },
+    academicRescueAcademy: {
+      title: "Academic Rescue Academy — 1 minute session reel",
+      status: "Video coming soon",
+    },
+    popUpWelfareCamps: {
+      title: "Pop-Up Welfare Camps — 1 minute session reel",
+      status: "Video coming soon",
+    },
   },
   leadership: [
     { role: "President", name: "Name to be supplied", image: null },
@@ -89,4 +103,33 @@ export const site = {
     { subject: "Volunteer networking or team bonding", image: null },
     { subject: "Tour or outing", image: null },
   ] satisfies GalleryPlaceholder[],
+  howItWorks: [
+    { number: "01", title: "Show up", description: "University students volunteer their time." },
+    { number: "02", title: "Support", description: "Academic and practical learning is delivered." },
+    { number: "03", title: "Stay consistent", description: "Children see familiar volunteers who return regularly." },
+  ] satisfies EditorialStep[],
+  volunteerJourney: [
+    { number: "01", title: "Register", description: "Submit the volunteer form." },
+    { number: "02", title: "Meet the team", description: "Join a short orientation / introduction." },
+    { number: "03", title: "Join a session", description: "Start volunteering with the field team." },
+  ] satisfies EditorialStep[],
+  volunteerExperience: {
+    heading: "Why join Tori School?",
+    introduction: "Volunteering here is a chance to learn alongside children, build practical teaching experience, and become part of a team that consistently shows up.",
+    points: [
+      "Connect with children through patient, everyday learning.",
+      "Gain hands-on experience in teaching and field work.",
+      "Create memories together as part of a returning team.",
+    ],
+  },
+  safeguarding: {
+    heading: "Safeguarding matters",
+    copy: "Volunteers are expected to follow Tori School's child-safety and responsible-conduct guidelines while working with children.",
+  },
+  volunteerCta: {
+    eyebrow: "Ready to show up?",
+    heading: "Register as a volunteer",
+    description: "The volunteer registration form will be available here soon.",
+    unavailableMessage: "Registration link coming soon",
+  },
 } as const;

@@ -1,14 +1,18 @@
-import { site } from "@/data/site";
 import { Container } from "@/components/ui/Container";
+import { site } from "@/data/site";
 
 export function Footer() {
   return (
     <footer className="border-t border-line bg-cream">
-      <Container className="flex flex-col gap-3 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-        <p>{site.identity.name} · {site.identity.location}</p>
-        <a href={site.links.facebook} target="_blank" rel="noreferrer" className="w-fit underline decoration-line underline-offset-4 hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-          Follow on Facebook
-        </a>
+      <Container className="py-10 sm:py-12">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-lg font-semibold tracking-[-0.02em] text-ink">{site.identity.name}</p>
+            <p className="mt-2 text-sm text-muted">{site.identity.location}</p>
+          </div>
+          <a href={site.links.facebook} target="_blank" rel="noopener noreferrer" className="w-fit text-sm font-medium text-ink underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Follow on Facebook</a>
+        </div>
+        <div className="mt-10 border-t border-line pt-5 text-xs text-muted">© {new Date().getFullYear()} {site.identity.name}</div>
       </Container>
     </footer>
   );

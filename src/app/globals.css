@@ -5,6 +5,8 @@
   --cream: #f7f3eb;
   --accent: #b55232;
   --accent-strong: #8f3e28;
+  --accent-soft: #e3b99f;
+  --surface: #eee8dc;
   --muted: #5e6964;
   --line: #dcd8cf;
 }
@@ -14,6 +16,8 @@
   --color-cream: var(--cream);
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-surface: var(--surface);
   --color-muted: var(--muted);
   --color-line: var(--line);
   --font-sans: var(--font-geist-sans);
