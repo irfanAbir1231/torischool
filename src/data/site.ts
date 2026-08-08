@@ -37,6 +37,7 @@ export const site = {
     name: "Tori School",
     subtitle: "Pilot · University of Dhaka",
     location: "University of Dhaka, Bangladesh",
+    logo: null as string | null,
   },
   navigation: [
     { label: "Tracks", href: "#tracks" },
@@ -94,9 +95,14 @@ export const site = {
     },
   },
   leadership: [
-    { role: "President", name: "Name to be supplied", image: null },
-    { role: "Secretary", name: "Name to be supplied", image: null },
+    { role: "President", name: "Details coming soon", image: null },
+    { role: "Secretary", name: "Details coming soon", image: null },
   ] satisfies PersonPlaceholder[],
+  organization: {
+    introduction: "Leadership details coming soon; the people behind the work will be introduced here.",
+    teamPhoto: null as string | null,
+    teamPhotoCaption: "The Tori School team — core team and field squads.",
+  },
   volunteerGallery: [
     { subject: "Volunteers with children", image: null },
     { subject: "Memory or activity moment", image: null },
@@ -118,7 +124,7 @@ export const site = {
     introduction: "Volunteering here is a chance to learn alongside children, build practical teaching experience, and become part of a team that consistently shows up.",
     points: [
       "Connect with children through patient, everyday learning.",
-      "Gain hands-on experience in teaching and field work.",
+      "Gain hands-on teaching experience.",
       "Create memories together as part of a returning team.",
     ],
   },
