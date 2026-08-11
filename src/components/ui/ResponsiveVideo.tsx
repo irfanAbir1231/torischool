@@ -7,6 +7,7 @@ type ResponsiveVideoProps = {
   status?: string;
   className?: string;
   poster?: string | null;
+  parallax?: boolean;
 };
 
 function getEmbedUrl(source: string | null) {
@@ -36,11 +37,11 @@ function getEmbedUrl(source: string | null) {
   return null;
 }
 
-export function ResponsiveVideo({ source, title, status = "Video coming soon", className, poster }: ResponsiveVideoProps) {
+export function ResponsiveVideo({ source, title, status = "Video coming soon", className, poster, parallax = false }: ResponsiveVideoProps) {
   const embedUrl = getEmbedUrl(source);
 
   return (
-    <div className={cn("aspect-video w-full max-w-5xl overflow-hidden rounded-2xl border border-line bg-ink", className)}>
+    <div data-parallax={parallax ? "0.08" : undefined} className={cn("aspect-video w-full max-w-5xl overflow-hidden rounded-2xl border border-line bg-ink", className)}>
       {embedUrl ? (
         <iframe
           className="h-full w-full"

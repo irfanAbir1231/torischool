@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ScrollMotion } from "@/components/motion/ScrollMotion";
 
 import "./globals.css";
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full bg-cream font-sans text-ink">
         <a href="#main-content" className="skip-link">Skip to content</a>
         <Header />
+        <ScrollMotion />
         {children}
         <Footer />
       </body>
