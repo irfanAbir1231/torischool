@@ -10,7 +10,12 @@ export function Footer() {
             <p className="text-lg font-semibold tracking-[-0.02em] text-ink">{site.identity.name}</p>
             <p className="mt-2 text-sm text-muted">{site.identity.location}</p>
           </div>
-          <a href={site.links.facebook} target="_blank" rel="noopener noreferrer" className="w-fit text-sm font-medium text-ink underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Follow on Facebook</a>
+          <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-ink">
+            <a href={`mailto:${site.links.email}`} className="underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">{site.links.email}</a>
+            <a href={site.links.facebook} target="_blank" rel="noopener noreferrer" className="underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Facebook</a>
+            <a href={site.links.youtube} target="_blank" rel="noopener noreferrer" className="underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">YouTube</a>
+            <a href={site.links.linkedin} target="_blank" rel="noopener noreferrer" className="underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">LinkedIn</a>
+          </div>
         </div>
         <div className="mt-10 border-t border-line pt-5 text-xs text-muted">© {new Date().getFullYear()} {site.identity.name}</div>
       </Container>

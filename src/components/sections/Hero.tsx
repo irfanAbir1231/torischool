@@ -17,7 +17,7 @@ export function Hero() {
           </div>
         </div>
         <div className="mt-14 sm:mt-18 lg:mt-20">
-          <ResponsiveVideo source={site.links.heroVideo} title={site.videoContent.hero.title} status={site.videoContent.hero.status} className="mx-auto" />
+          <ResponsiveVideo source={site.links.heroVideo} poster={site.hero.image} title={site.videoContent.hero.title} status={site.videoContent.hero.status} className="mx-auto" />
         </div>
       </Container>
     </Section>

@@ -1,10 +1,12 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type ResponsiveVideoProps = {
   source: string | null;
   title: string;
   status?: string;
   className?: string;
+  poster?: string | null;
 };
 
 function getEmbedUrl(source: string | null) {
@@ -34,7 +36,7 @@ function getEmbedUrl(source: string | null) {
   return null;
 }
 
-export function ResponsiveVideo({ source, title, status = "Video coming soon", className }: ResponsiveVideoProps) {
+export function ResponsiveVideo({ source, title, status = "Video coming soon", className, poster }: ResponsiveVideoProps) {
   const embedUrl = getEmbedUrl(source);
 
   return (
@@ -49,7 +51,10 @@ export function ResponsiveVideo({ source, title, status = "Video coming soon", c
           allowFullScreen
         />
       ) : (
-        <div className="flex h-full flex-col items-center justify-center px-6 text-center text-cream">
+        <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-6 text-center text-cream">
+          {poster ? <Image src={poster} alt="" fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover opacity-65" /> : null}
+          <div className="absolute inset-0 bg-ink/45" />
+          <div className="relative z-10 flex flex-col items-center">
           <span aria-hidden="true" className="mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-cream/40">
             <svg viewBox="0 0 24 24" className="ml-1 h-5 w-5 fill-current" focusable="false">
               <path d="M8 5.5v13l10-6.5-10-6.5Z" />
@@ -58,6 +63,7 @@ export function ResponsiveVideo({ source, title, status = "Video coming soon", c
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cream/70">Tori School</p>
           <p className="mt-3 text-lg font-medium tracking-[-0.01em] sm:text-xl">{title}</p>
           <p className="mt-2 text-sm text-cream/65">{status}</p>
+          </div>
         </div>
       )}
     </div>

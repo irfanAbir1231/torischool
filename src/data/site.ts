@@ -35,7 +35,7 @@ export type EditorialStep = {
 export const site = {
   identity: {
     name: "Tori School",
-    subtitle: "Pilot · University of Dhaka",
+    subtitle: "University of Dhaka",
     location: "University of Dhaka, Bangladesh",
     logo: null as string | null,
   },
@@ -45,53 +45,56 @@ export const site = {
     { label: "Get Involved", href: "#volunteer" },
   ] satisfies SiteLink[],
   hero: {
-    headline: "Learning support for Dhaka's children who school forgets first.",
+    headline: "Learning beyond the classroom.",
     paragraphs: [
-      "Tori School is a volunteer-run program started by University of Dhaka undergraduates.",
-      "We provide free academic support and life-skills education to children of low-income campus staff and street-connected youth around the city.",
-      "Currently in pilot phase, built by students who show up week after week.",
+      "Tori School provides free weekend classes for children from low-income campus staff families and surrounding campus communities.",
+      "Monthly education camps provide street-connected children with basic literacy, numeracy, and essential life skills.",
     ],
+    image: "/images/photo_academic_support_hero.jpg",
   },
   stats: [
-    { value: "~65", label: "Student Volunteers" },
-    { value: "2", label: "Program Tracks" },
-    { value: "1:2", label: "Teacher–Student Ratio (Weekend)" },
+    { value: "100", label: "Student Volunteers" },
+    { value: "60", label: "Children Supported" },
+    { value: "2", label: "Programs" },
   ] satisfies Stat[],
   tracks: [
     {
-      title: "Academic Rescue Academy",
+      title: "Academic Support",
       description:
-        "Free weekend homework and exam support at Curzon Hall & Mal Chattar for 35–50 children (ages 5–13) of campus support staff and rickshaw pullers. We reinforce what they already learn in school, rather than adding a new curriculum.",
+        "Free weekend learning support for 45–60 children aged 5–13 from campus staff families and surrounding communities. We provide quality teaching, homework support, and close mentoring to help children stay engaged with their education.",
       where: "Curzon Hall & Mal Chattar",
       when: "Weekends",
     },
     {
-      title: "Pop-Up Welfare Camps",
+      title: "Education Camps",
       description:
-        "Twice-monthly pop-up sessions near TSC and Suhrawardy Udyan for transient and street-connected youth. We teach practical math to prevent exploitation, safety basics, and health hygiene, in a format that doesn't assume stable attendance.",
-      where: "TSC & Suhrawardy Udyan",
-      when: "Twice monthly",
+        "Monthly education camps near the University of Dhaka campus for street-connected children. Sessions focus on basic literacy, numeracy, practical skills, safety, and personal hygiene.",
+      where: "Near University of Dhaka campus",
+      when: "Monthly",
     },
   ] satisfies ProgramTrack[],
   links: {
     facebook: "https://www.facebook.com/torischooldu",
-    volunteerForm: "#",
+    youtube: "https://www.youtube.com/@ToriSchoolDU",
+    linkedin: "https://www.linkedin.com/company/tori-school-in-du/",
+    email: "torischooldu@gmail.com",
+    volunteerForm: "https://forms.gle/zxEck1UQzLAvgrLC9",
     heroVideo: null as string | null,
-    academicRescueAcademyVideo: null as string | null,
-    popUpWelfareCampsVideo: null as string | null,
+    academicRescueAcademyVideo: "https://youtu.be/hRDS9RDO1ss",
+    popUpWelfareCampsVideo: "https://youtu.be/6h_WjO5SyWI",
   },
   videoContent: {
     hero: {
-      title: "1 minute introduction",
-      status: "Video coming soon",
+      title: "Academic Support",
+      status: "Free weekend learning support at Curzon Hall and Mal Chattar",
     },
     academicRescueAcademy: {
-      title: "Academic Rescue Academy — 1 minute session reel",
-      status: "Video coming soon",
+      title: "Academic Support — session reel",
+      status: "A regular weekend class",
     },
     popUpWelfareCamps: {
-      title: "Pop-Up Welfare Camps — 1 minute session reel",
-      status: "Video coming soon",
+      title: "Education Camps — session reel",
+      status: "A monthly education camp",
     },
   },
   leadership: [
@@ -99,15 +102,15 @@ export const site = {
     { role: "Secretary", name: "Details coming soon", image: null },
   ] satisfies PersonPlaceholder[],
   organization: {
-    introduction: "Leadership details coming soon; the people behind the work will be introduced here.",
-    teamPhoto: null as string | null,
-    teamPhotoCaption: "The Tori School team — core team and field squads.",
+    introduction: "Tori School is a student-led initiative at the University of Dhaka, bringing volunteers together to make consistent learning support possible for children in campus communities.",
+    teamPhoto: "/images/photo_volunteers_group.jpg",
+    teamPhotoCaption: "Tori School volunteers and children at the University of Dhaka.",
   },
   volunteerGallery: [
-    { subject: "Volunteers with children", image: null },
-    { subject: "Memory or activity moment", image: null },
-    { subject: "Volunteer networking or team bonding", image: null },
-    { subject: "Tour or outing", image: null },
+    { subject: "Children in a learning session", image: "/images/photo_children_session.jpg" },
+    { subject: "Volunteers teaching and participating", image: "/images/photo_volunteering.jpg" },
+    { subject: "Academic support in the campus community", image: "/images/photo_academic_support_hero.jpg" },
+    { subject: "Education camp activity", image: "/images/photo_education_camp_hero.jpg" },
   ] satisfies GalleryPlaceholder[],
   howItWorks: [
     { number: "01", title: "Show up", description: "University students volunteer their time." },
@@ -135,7 +138,7 @@ export const site = {
   volunteerCta: {
     eyebrow: "Ready to show up?",
     heading: "Register as a volunteer",
-    description: "The volunteer registration form will be available here soon.",
-    unavailableMessage: "Registration link coming soon",
+    description: "Join the team behind Tori School's weekend classes and monthly education camps.",
+    unavailableMessage: "Open volunteer registration form",
   },
 } as const;

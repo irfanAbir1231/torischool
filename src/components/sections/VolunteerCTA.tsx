@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 import { site } from "@/data/site";
 
 export function VolunteerCTA() {
-  const registrationAvailable = site.links.volunteerForm !== "#";
+  const registrationAvailable = Boolean(site.links.volunteerForm);
 
   return (
     <Section aria-labelledby="cta-heading" className="py-20 sm:py-28">
