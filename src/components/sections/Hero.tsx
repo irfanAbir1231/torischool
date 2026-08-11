@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 
 export function Hero() {
   return (
-    <Section aria-labelledby="hero-heading" className="pb-16 pt-16 sm:pb-24 sm:pt-24 lg:pb-28 lg:pt-28">
+    <Section id="about" aria-labelledby="hero-heading" className="pb-16 pt-16 sm:pb-24 sm:pt-24 lg:pb-28 lg:pt-28">
       <Container>
         <div className="max-w-4xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-accent">{site.identity.subtitle}</p>

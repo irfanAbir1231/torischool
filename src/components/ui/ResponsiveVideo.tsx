@@ -17,12 +17,12 @@ function getEmbedUrl(source: string | null) {
 
     if (url.hostname === "youtu.be") {
       const videoId = url.pathname.slice(1);
-      return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+      return videoId ? `https://www.youtube-nocookie.com/embed/${videoId}` : null;
     }
 
     if (url.hostname === "www.youtube.com" || url.hostname === "youtube.com") {
       const videoId = url.searchParams.get("v");
-      return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+      return videoId ? `https://www.youtube-nocookie.com/embed/${videoId}` : null;
     }
 
     if (url.hostname === "vimeo.com" || url.hostname === "www.vimeo.com") {

@@ -40,9 +40,10 @@ export const site = {
     logo: null as string | null,
   },
   navigation: [
-    { label: "Tracks", href: "#tracks" },
-    { label: "Team / Organization", href: "#team" },
+    { label: "About", href: "#about" },
     { label: "Get Involved", href: "#volunteer" },
+    { label: "Support ↗", href: "#support" },
+    { label: "Safeguarding Policy ↗", href: "/safeguarding-policy" },
   ] satisfies SiteLink[],
   hero: {
     headline: "Learning beyond the classroom.",
@@ -79,7 +80,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/company/tori-school-in-du/",
     email: "torischooldu@gmail.com",
     volunteerForm: "https://forms.gle/zxEck1UQzLAvgrLC9",
-    heroVideo: null as string | null,
+    heroVideo: "https://youtu.be/hRDS9RDO1ss",
     academicRescueAcademyVideo: "https://youtu.be/hRDS9RDO1ss",
     popUpWelfareCampsVideo: "https://youtu.be/6h_WjO5SyWI",
   },
@@ -134,6 +135,11 @@ export const site = {
   safeguarding: {
     heading: "Safeguarding matters",
     copy: "Volunteers are expected to follow Tori School's child-safety and responsible-conduct guidelines while working with children.",
+  },
+  support: {
+    heading: "Help keep learning within reach",
+    description: "Your support helps Tori School continue free weekend classes and monthly education camps for children in campus communities.",
+    bkashNumber: "+8801880384226",
   },
   volunteerCta: {
     eyebrow: "Ready to show up?",
