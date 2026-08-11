@@ -15,6 +15,7 @@ export function Footer() {
             <a href={site.links.facebook} target="_blank" rel="noopener noreferrer" className="underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Facebook</a>
             <a href={site.links.youtube} target="_blank" rel="noopener noreferrer" className="underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">YouTube</a>
             <a href={site.links.linkedin} target="_blank" rel="noopener noreferrer" className="underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">LinkedIn</a>
+            <a href="/safeguarding-policy.html" target="_blank" rel="noopener noreferrer" className="underline decoration-line underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Safeguarding Policy ↗</a>
           </div>
         </div>
         <div className="mt-10 border-t border-line pt-5 text-xs text-muted">© {new Date().getFullYear()} {site.identity.name}</div>

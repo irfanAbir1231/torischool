@@ -1,9 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-
 const sections = [
   ["intro", "Introduction & core objective"],
   ["identity", "Neutrality & non-commercialization"],
@@ -37,9 +34,7 @@ function Callout({ children, danger = false }: { children: ReactNode; danger?: b
 
 export default function SafeguardingPolicyPage() {
   return (
-    <div className="min-h-screen bg-cream text-ink">
-      <Header />
-      <main>
+    <main className="min-h-screen bg-cream text-ink">
         <section className="border-b border-line bg-surface py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-6 sm:px-8">
             <Link href="/" className="inline-flex text-sm font-semibold text-muted underline decoration-line underline-offset-4 hover:text-ink">← Back to Tori School</Link>
@@ -144,8 +139,6 @@ export default function SafeguardingPolicyPage() {
             </section>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+    </main>
   );
 }

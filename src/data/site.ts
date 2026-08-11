@@ -43,7 +43,6 @@ export const site = {
     { label: "About", href: "#about" },
     { label: "Get Involved", href: "#volunteer" },
     { label: "Support ↗", href: "#support" },
-    { label: "Safeguarding Policy ↗", href: "/safeguarding-policy" },
   ] satisfies SiteLink[],
   hero: {
     headline: "Learning beyond the classroom.",
