@@ -57,7 +57,7 @@ export const site = {
         label: "Education Camps",
         headline: "Learning beyond the classroom.",
         description: "Monthly education camps provide street-connected children with basic literacy, numeracy, and essential life skills.",
-        image: "/images/photo_education_camp_hero.jpg",
+        image: "/images/photo_education_camp_hero_2.png",
       },
     ],
   },
@@ -81,7 +81,7 @@ export const site = {
         "Monthly education camps near the University of Dhaka campus for street-connected children. Sessions focus on basic literacy, numeracy, practical skills, safety, and personal hygiene.",
       where: "Near University of Dhaka campus",
       when: "Monthly",
-      image: "/images/photo_education_camp_hero.jpg",
+      image: "/images/photo_education_camp_hero_2.png",
     },
   ] satisfies ProgramTrack[],
   links: {
@@ -123,7 +123,7 @@ export const site = {
     { subject: "Children in a learning session", image: "/images/photo_children_session.jpg" },
     { subject: "Volunteers teaching and participating", image: "/images/photo_volunteering.jpg" },
     { subject: "Academic support in the campus community", image: "/images/photo_academic_support_hero.jpg" },
-    { subject: "Education camp activity", image: "/images/photo_education_camp_hero.jpg" },
+    { subject: "Education camp activity", image: "/images/photo_education_camp_hero_2.png" },
   ] satisfies GalleryPlaceholder[],
   howItWorks: [
     { number: "01", title: "Show up", description: "University students volunteer their time." },
