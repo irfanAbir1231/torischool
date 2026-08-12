@@ -116,7 +116,7 @@ export const site = {
   ] satisfies PersonPlaceholder[],
   organization: {
     introduction: "Tori School is a student-led initiative at the University of Dhaka, bringing volunteers together to make consistent learning support possible for children in campus communities.",
-    teamPhoto: "/images/photo_volunteers_group.jpg",
+    teamPhoto: "/images/photo_volunteers_group.png",
     teamPhotoCaption: "Tori School volunteers and children at the University of Dhaka.",
   },
   volunteerGallery: [
