@@ -38,7 +38,7 @@ export const site = {
     name: "Tori School",
     subtitle: "University of Dhaka",
     location: "University of Dhaka, Bangladesh",
-    logo: null as string | null,
+    logo: "/images/Tori Logo-02 (1).jpg.jpeg" as string | null,
   },
   navigation: [
     { label: "About", href: "#about" },
