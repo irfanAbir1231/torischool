@@ -90,6 +90,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/company/tori-school-in-du/",
     email: "torischooldu@gmail.com",
     volunteerForm: "https://forms.gle/zxEck1UQzLAvgrLC9",
+    donationForm: "https://forms.gle/RHrpWHHHjguB27mw9",
     heroVideo: "https://youtu.be/hRDS9RDO1ss",
     volunteerVideo: "https://youtu.be/zF8qFQxTHek",
     academicRescueAcademyVideo: "https://youtu.be/hRDS9RDO1ss",
@@ -150,7 +151,6 @@ export const site = {
   support: {
     heading: "Help keep learning within reach",
     description: "Your support helps Tori School continue free weekend classes and monthly education camps for children in campus communities.",
-    bkashNumber: "+8801880384226",
   },
   volunteerCta: {
     eyebrow: "Ready to show up?",

@@ -1,42 +1,24 @@
-"use client";
-
-import { useState } from "react";
-
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { site } from "@/data/site";
 
 export function Support() {
-  const [copied, setCopied] = useState(false);
-
-  async function copyNumber() {
-    try {
-      await navigator.clipboard.writeText(site.support.bkashNumber);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1800);
-    } catch {
-      setCopied(false);
-    }
-  }
-
   return (
-    <Section id="support" aria-labelledby="support-heading" className="bg-accent py-16 text-cream sm:py-20">
+    <Section id="support" aria-labelledby="support-heading" className="bg-cream py-20 sm:py-28">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-soft">Support Tori School</p>
-            <h2 id="support-heading" className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">{site.support.heading}</h2>
-            <p className="mt-5 max-w-xl text-base leading-8 text-cream/80">{site.support.description}</p>
-          </div>
-          <div className="min-w-0 border border-cream/30 bg-ink p-6 sm:min-w-[22rem] sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent-soft">Send Money via bKash</p>
-            <p className="mt-4 text-2xl font-semibold tracking-[-0.02em] text-cream sm:text-3xl">{site.support.bkashNumber}</p>
-            <p className="mt-3 text-sm leading-6 text-cream/70">Open your bKash app, choose Send Money, and use this number.</p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <button type="button" onClick={copyNumber} className="inline-flex min-h-11 items-center justify-center border border-cream/50 px-4 text-sm font-semibold text-cream transition-colors hover:bg-cream hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream">
-                {copied ? "Number copied" : "Copy number"}
-              </button>
-              <a href="https://www.bkash.com/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center bg-cream px-4 text-sm font-semibold text-ink transition-colors hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream">Open bKash ↗</a>
+        <div className="relative isolate overflow-hidden rounded-[1.75rem] bg-ink px-6 py-10 text-cream sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-28 -z-10 h-72 w-72 rounded-full border border-accent/30 bg-accent/10 blur-sm" />
+          <div aria-hidden="true" className="pointer-events-none absolute -bottom-36 left-1/3 -z-10 h-80 w-80 rounded-full border border-cream/10" />
+          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-soft">Support Tori School</p>
+              <h2 id="support-heading" className="mt-5 max-w-xl text-4xl font-semibold leading-[1.06] tracking-[-0.045em] text-cream sm:text-5xl">{site.support.heading}</h2>
+              <p className="mt-6 max-w-xl text-base leading-8 text-cream/70 sm:text-lg">{site.support.description}</p>
+            </div>
+            <div className="max-w-sm rounded-2xl border border-cream/15 bg-cream/[0.06] p-6 backdrop-blur-sm sm:p-7">
+              <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-accent-soft">Want to contribute?</p>
+              <p className="mt-4 text-sm leading-7 text-cream/70">Share your donation details through our form and our team will follow up with the next steps.</p>
+              <a href={site.links.donationForm} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-ink shadow-[0_4px_0_#c97f1e] transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Share donation details ↗</a>
             </div>
           </div>
         </div>
