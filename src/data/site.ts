@@ -13,6 +13,7 @@ export type ProgramTrack = {
   description: string;
   where: string;
   when: string;
+  image: string;
 };
 
 export type PersonPlaceholder = {
@@ -45,12 +46,20 @@ export const site = {
     { label: "Support ↗", href: "#support" },
   ] satisfies SiteLink[],
   hero: {
-    headline: "Learning beyond the classroom.",
-    paragraphs: [
-      "Tori School provides free weekend classes for children from low-income campus staff families and surrounding campus communities.",
-      "Monthly education camps provide street-connected children with basic literacy, numeracy, and essential life skills.",
+    slides: [
+      {
+        label: "Academic Support",
+        headline: "Free learning support for children in our campus communities.",
+        description: "Tori School provides free weekend classes for children from low-income campus staff families and surrounding campus communities.",
+        image: "/images/photo_academic_support_hero.jpg",
+      },
+      {
+        label: "Education Camps",
+        headline: "Learning beyond the classroom.",
+        description: "Monthly education camps provide street-connected children with basic literacy, numeracy, and essential life skills.",
+        image: "/images/photo_education_camp_hero.jpg",
+      },
     ],
-    image: "/images/photo_academic_support_hero.jpg",
   },
   stats: [
     { value: "100", label: "Student Volunteers" },
@@ -64,6 +73,7 @@ export const site = {
         "Free weekend learning support for 45–60 children aged 5–13 from campus staff families and surrounding communities. We provide quality teaching, homework support, and close mentoring to help children stay engaged with their education.",
       where: "Curzon Hall & Mal Chattar",
       when: "Weekends",
+      image: "/images/photo_academic_support_hero.jpg",
     },
     {
       title: "Education Camps",
@@ -71,6 +81,7 @@ export const site = {
         "Monthly education camps near the University of Dhaka campus for street-connected children. Sessions focus on basic literacy, numeracy, practical skills, safety, and personal hygiene.",
       where: "Near University of Dhaka campus",
       when: "Monthly",
+      image: "/images/photo_education_camp_hero.jpg",
     },
   ] satisfies ProgramTrack[],
   links: {
@@ -80,6 +91,7 @@ export const site = {
     email: "torischooldu@gmail.com",
     volunteerForm: "https://forms.gle/zxEck1UQzLAvgrLC9",
     heroVideo: "https://youtu.be/hRDS9RDO1ss",
+    volunteerVideo: "https://youtu.be/zF8qFQxTHek",
     academicRescueAcademyVideo: "https://youtu.be/hRDS9RDO1ss",
     popUpWelfareCampsVideo: "https://youtu.be/6h_WjO5SyWI",
   },

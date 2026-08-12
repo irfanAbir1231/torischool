@@ -1,20 +1,25 @@
+import Image from "next/image";
+
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { StatCounter } from "@/components/ui/StatCounter";
 import { site } from "@/data/site";
 
 export function ImpactStats() {
   return (
-    <Section aria-labelledby="impact-heading" className="border-y border-line bg-surface py-16 sm:py-20">
+    <Section aria-labelledby="impact-heading" className="border-y border-line bg-cream py-20 sm:py-28">
       <Container>
-        <SectionHeading id="impact-heading" eyebrow="A starting point" title="Current pilot snapshot" description="A small initiative, measured by the people who keep showing up." />
-        <div data-stagger className="mt-12 grid gap-8 border-t border-line pt-8 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-line sm:border-t-0 sm:pt-0">
-          {site.stats.map((stat) => (
-            <div key={stat.label} className="sm:px-8 first:sm:pl-0 last:sm:pr-0">
-              <p className="text-5xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl"><StatCounter value={stat.value} /></p>
-              <p className="mt-3 max-w-[14rem] text-sm leading-6 text-muted">{stat.label}</p>
-            </div>
+        <div className="mb-10 max-w-2xl">
+          <p className="eyebrow mb-4">Snapshot</p>
+          <h2 id="impact-heading" className="text-4xl font-semibold tracking-[-0.045em] text-ink sm:text-5xl">Our journey so far</h2>
+        </div>
+        <div data-stagger className="grid gap-5 sm:grid-cols-2">
+          {[site.stats[0], site.stats[1]].map((stat, index) => (
+            <article key={stat.label} className="group relative aspect-[4/5] overflow-hidden rounded-2xl bg-surface">
+              <Image src={index === 0 ? "/images/photo_volunteers_group.jpg" : "/images/photo_children_session.jpg"} alt={index === 0 ? "Tori School volunteers and children" : "Children in a Tori School session"} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent" />
+              <div className="absolute left-5 top-5 rounded-full bg-ink/35 px-3 py-1.5 font-mono text-[0.6rem] uppercase tracking-[0.12em] text-cream/80 backdrop-blur-sm">{index === 0 ? "Our community" : "In session"}</div>
+              <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-cream p-4 shadow-lg"><p className="text-4xl font-semibold tracking-[-0.04em] text-ink sm:text-5xl">{stat.value}</p><p className="mt-1 text-sm font-medium text-muted">{stat.label}</p></div>
+            </article>
           ))}
         </div>
       </Container>

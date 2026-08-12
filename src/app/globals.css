@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #172321;
-  --cream: #f7f3eb;
-  --accent: #b55232;
-  --accent-strong: #8f3e28;
-  --accent-soft: #e3b99f;
-  --surface: #eee8dc;
-  --muted: #5e6964;
-  --line: #dcd8cf;
+  --ink: #152238;
+  --cream: #fbf8f1;
+  --accent: #e2a33d;
+  --accent-strong: #c97f1e;
+  --accent-soft: #f1d28e;
+  --surface: #f1e9d8;
+  --muted: #2b3c5a;
+  --line: rgba(21, 34, 56, 0.14);
 }
 
 @theme inline {
@@ -62,6 +62,37 @@ a {
 
 .skip-link:focus {
   transform: translateY(0);
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--accent-strong);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 0.2rem 0.2rem 0.05rem 0.05rem;
+  background: var(--accent-strong);
+  clip-path: polygon(0 58%, 100% 58%, 78% 100%, 22% 100%, 50% 0, 78% 30%, 50% 30%);
+}
+
+@keyframes hero-copy-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .motion-ready [data-reveal] {
