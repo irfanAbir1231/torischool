@@ -24,6 +24,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(21,34,56,.15)_0%,rgba(21,34,56,.22)_36%,rgba(21,34,56,.92)_100%)]" />
         </div>
       ))}
+      <div aria-hidden="true" className="hero-focus-blur" />
       <div className="absolute left-6 right-6 top-7 z-10 flex items-center justify-between sm:left-10 sm:right-10 sm:top-10">
         <span className="rounded-full border border-cream/40 bg-ink/30 px-3 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-cream backdrop-blur-sm">{slide.label}</span>
         <div className="flex items-center gap-2" aria-label="Hero slides">

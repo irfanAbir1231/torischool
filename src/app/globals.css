@@ -95,6 +95,40 @@ h1, h2, h3 {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.hero-focus-blur {
+  position: absolute;
+  z-index: 1;
+  left: -16%;
+  bottom: -18%;
+  width: 92%;
+  height: 82%;
+  border: 1px solid rgba(251, 248, 241, 0.08);
+  background: rgba(21, 34, 56, 0.34);
+  backdrop-filter: blur(18px) saturate(0.82);
+  -webkit-backdrop-filter: blur(18px) saturate(0.82);
+  clip-path: ellipse(74% 68% at 28% 58%);
+  pointer-events: none;
+}
+
+.hero-focus-blur::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 58% 42%, rgba(21, 34, 56, 0.08), rgba(21, 34, 56, 0.35) 70%);
+}
+
+@media (max-width: 640px) {
+  .hero-focus-blur {
+    left: -42%;
+    bottom: -14%;
+    width: 145%;
+    height: 72%;
+    clip-path: ellipse(68% 66% at 38% 58%);
+    backdrop-filter: blur(15px) saturate(0.8);
+    -webkit-backdrop-filter: blur(15px) saturate(0.8);
+  }
+}
+
 .motion-ready [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 28px, 0);
