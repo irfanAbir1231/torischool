@@ -20,7 +20,7 @@ export function Hero() {
     <section aria-labelledby="hero-heading" className="hero-stage relative isolate flex min-h-[min(760px,calc(100svh-5rem))] items-end overflow-hidden bg-ink text-cream">
       {slides.map((item, index) => (
         <div key={item.label} className={`absolute inset-0 transition-opacity duration-1000 ${index === activeSlide ? "opacity-100" : "pointer-events-none opacity-0"}`} aria-hidden={index !== activeSlide}>
-          <Image src={item.image} alt="" fill priority={index === 0} sizes="100vw" className="object-cover" />
+          <Image src={item.image} alt="" fill priority sizes="100vw" unoptimized className="object-cover" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(21,34,56,.15)_0%,rgba(21,34,56,.22)_36%,rgba(21,34,56,.92)_100%)]" />
         </div>
       ))}
