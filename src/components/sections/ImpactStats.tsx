@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { StatCounter } from "@/components/ui/StatCounter";
 import { site } from "@/data/site";
 
 export function ImpactStats() {
@@ -18,7 +19,7 @@ export function ImpactStats() {
               <Image src={index === 0 ? "/images/photo_volunteers_group.png" : "/images/photo_children_session.jpg"} alt={index === 0 ? "Tori School volunteers and children" : "Children in a Tori School session"} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent" />
               <div className="absolute left-5 top-5 rounded-full bg-ink/35 px-3 py-1.5 font-mono text-[0.6rem] uppercase tracking-[0.12em] text-cream/80 backdrop-blur-sm">{index === 0 ? "Our community" : "In session"}</div>
-              <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-cream p-4 shadow-lg"><p className="text-4xl font-semibold tracking-[-0.04em] text-ink sm:text-5xl">{stat.value}</p><p className="mt-1 text-sm font-medium text-muted">{stat.label}</p></div>
+              <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-cream p-4 shadow-lg"><p className="text-4xl font-semibold tracking-[-0.04em] text-ink sm:text-5xl"><StatCounter value={stat.value} /></p><p className="mt-1 text-sm font-medium text-muted">{stat.label}</p></div>
             </article>
           ))}
         </div>
