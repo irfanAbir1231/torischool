@@ -12,13 +12,43 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+const siteTitle = "Tori School | Volunteer-led learning support in Dhaka";
+const siteDescription = "Volunteer-led academic and life-skills support for children in Dhaka, started by University of Dhaka students.";
+const siteUrl = "https://www.torischool.org";
+
 export const metadata: Metadata = {
-  title: "Tori School | Volunteer-led learning support in Dhaka",
-  description: "Volunteer-led academic and life-skills support for children in Dhaka, started by University of Dhaka students.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  applicationName: "Tori School",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
-    title: "Tori School | Volunteer-led learning support in Dhaka",
-    description: "Volunteer-led academic and life-skills support for children in Dhaka, started by University of Dhaka students.",
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: "Tori School",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tori School — volunteer-led learning support for children in Dhaka",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/og-image.jpg"],
   },
 };
 
