@@ -38,7 +38,7 @@ export function Hero() {
             <h1 id="hero-heading" className="max-w-3xl text-pretty text-4xl font-semibold leading-[1.04] tracking-[-0.045em] text-cream sm:text-6xl lg:text-7xl">{slide.headline}</h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-cream/80 sm:text-lg">{slide.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#volunteer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-ink shadow-[0_4px_0_#c97f1e] transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Get involved ↗</a>
+              <a href="#volunteer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-ink shadow-[0_4px_0_#c97f1e] transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Get involved &#8599;</a>
               <a href="#tracks" className="inline-flex min-h-12 items-center justify-center rounded-full border border-cream/50 bg-ink/20 px-6 text-sm font-semibold text-cream backdrop-blur-sm transition-colors hover:bg-cream hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream">Explore programs</a>
             </div>
           </div>

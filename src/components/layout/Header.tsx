@@ -9,24 +9,53 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-cream">
       <Container className="flex min-h-20 items-center justify-between gap-8">
-        <Link href="/" className="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+        <Link
+          href="/"
+          className="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+        >
           {site.identity.logo ? (
             <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-line bg-cream shadow-[0_5px_14px_-10px_rgba(21,34,56,.5)]">
-              <Image src={site.identity.logo} alt="" fill sizes="48px" className="object-cover object-[center_28%] mix-blend-multiply" />
+              <Image
+                src={site.identity.logo}
+                alt=""
+                fill
+                sizes="48px"
+                className="object-cover object-[center_28%] mix-blend-multiply"
+              />
             </span>
           ) : null}
+
           <span>
-            <span className="block text-lg font-semibold tracking-[-0.02em] text-ink">{site.identity.name}</span>
-            <span className="block text-[0.68rem] uppercase tracking-[0.16em] text-muted">{site.identity.subtitle}</span>
+            <span className="block text-lg font-semibold tracking-[-0.02em] text-ink">
+              {site.identity.name}
+            </span>
+            <span className="block text-[0.68rem] uppercase tracking-[0.16em] text-muted">
+              {site.identity.subtitle}
+            </span>
           </span>
         </Link>
-        <nav aria-label="Main navigation" className="hidden items-center gap-7 md:flex">
-          {site.navigation.map((item) => (
-            <a key={item.href} href={item.href} className="text-sm text-muted transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-              {item.label}
-            </a>
-          ))}
-        </nav>
+
+        <div className="hidden items-center gap-7 md:flex">
+          <nav aria-label="Main navigation" className="flex items-center gap-7">
+            {site.navigation.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <Link
+            href="/login"
+            className="inline-flex min-h-11 items-center justify-center border border-ink bg-ink px-5 text-sm font-medium text-cream transition-colors hover:bg-transparent hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            Login
+          </Link>
+        </div>
+
         <MobileNav links={site.navigation} />
       </Container>
     </header>

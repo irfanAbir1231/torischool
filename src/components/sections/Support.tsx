@@ -18,7 +18,7 @@ export function Support() {
             <div className="max-w-sm rounded-2xl border border-cream/15 bg-cream/[0.06] p-6 backdrop-blur-sm sm:p-7">
               <p className="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-accent-soft">Want to contribute?</p>
               <p className="mt-4 text-sm leading-7 text-cream/70">Share your donation details through our form and our team will follow up with the next steps.</p>
-              <a href={site.links.donationForm} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-ink shadow-[0_4px_0_#c97f1e] transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Share donation details ↗</a>
+             <a href={site.links.donationForm} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-ink shadow-[0_4px_0_#c97f1e] transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Share donation details &#8599;</a>
             </div>
           </div>
         </div>
