@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import type { ReactNode } from "react";
 
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-import { ScrollMotion } from "@/components/motion/ScrollMotion";
+import { SiteChrome } from "@/components/layout/SiteChrome";
 
 import "./globals.css";
 
@@ -13,7 +12,10 @@ const geist = Geist({
 });
 
 const siteTitle = "Tori School | Volunteer-led learning support in Dhaka";
-const siteDescription = "Volunteer-led academic and life-skills support for children in Dhaka, started by University of Dhaka students.";
+
+const siteDescription =
+  "Volunteer-led academic and life-skills support for children in Dhaka, started by University of Dhaka students.";
+
 const siteUrl = "https://www.torischool.org";
 
 export const metadata: Metadata = {
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Tori School — volunteer-led learning support for children in Dhaka",
+        alt: "Tori School - volunteer-led learning support for children in Dhaka",
       },
     ],
   },
@@ -52,15 +54,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full bg-cream font-sans text-ink">
-        <a href="#main-content" className="skip-link">Skip to content</a>
-        <Header />
-        <ScrollMotion />
-        {children}
-        <Footer />
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
